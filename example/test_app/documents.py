@@ -56,6 +56,8 @@ class CarDocument(DocType):
             return related_instance.car
 
         # otherwise it's a Manufacturer or a Category
+        print('IS INSTANCEE', related_instance, type(related_instance),
+              related_instance.car_set.all())
         return related_instance.car_set.all()
 
 
